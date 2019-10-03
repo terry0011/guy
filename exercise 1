@@ -1,0 +1,17 @@
+// Task
+//* taking every number between 100 and 999, find the numbers of which the product cubed of their individual digits is equal to the itself. *//
+let qualifiers = [];
+let count = 99;
+while (count != 999){
+	count ++;
+	var arr = count.toString().split(""); //creates array as individual digits of "count"
+	var U = parseInt(arr[2]);
+	var T = parseInt(arr[1]);
+	var H = parseInt(arr[0]);
+	let total = (U*U*U)+(T*T*T)+(H*H*H);
+	if (total === count){
+		qualifiers.push(count);
+	}
+	console.log(`the count is ${count} and the total is ${total}`);
+}
+console.log(qualifiers);
